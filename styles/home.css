@@ -1,0 +1,43 @@
+/* hero */
+.main .home-section .hero-main{
+    margin: 0 100px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+.main .home-section .hero-main .hero-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .home-section .hero-main .hero-text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+    margin: 0;
+}
+.main .home-section .hero-main .hero-text-container h1 span{
+    font-weight: 400;
+    color: var(--primarycolor);
+}
+.main .home-section .hero-main .hero-text-container p{
+    font-size: 34px;
+    font-weight: 100;
+    margin-top: 0;
+}
+.main .home-section .hero-main .hero-text-container button{
+   width: 280px;
+   height: 59px;
+   background-color: var(--primarycolor);
+   border-radius: 7px;
+   border: none;
+   font-size: 27px;
+   font-weight: 400;
+   color:black;
+   margin-top: 67px;
+}
+.main .home-section .hero-main .hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 80px;
+ }

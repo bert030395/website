@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import "./navbar.css";
+@import "./home.css";
+@import "./products.css";
+@import "./hoverdetails.css";
+@import "./contact.css";
+
+*{
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    font-weight: 300;
+}
+/* variables */
+:root{
+    --primarycolor:#ffff00d0;
+    --primarycolorhover:#ffff008c;
+}
+/* default */
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/* para matagal ang bilog sa list */
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

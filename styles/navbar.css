@@ -1,0 +1,187 @@
+.main{
+    height: 100vh;
+    background: #000;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 130vh) 1fr;
+}
+
+/* -----------------------DEFAULT OT ALL SA UPPER PHASE NAVBAR------------------------------------------------- */
+.main .home-section{
+    background-image: url("/assets/images/home-bg.png");
+    background-position: center;
+    /* cover lahat */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    /* maglagay sya ng grid sa taa */
+    display: grid;
+    grid-template-rows: 120px 1fr;
+}
+
+/* para ma ma align sila ng vertical */
+.main .home-section .nav-main{
+    margin: 0 100px;
+    display: flex;
+    align-items: center;
+}
+/* para humaba ang right side ng div ng logo at mapunta sa left */
+.main .home-section .nav-main .logo-container{
+    flex: 1;
+}
+/* para mapunta sa right ang ul li */
+.main .home-section .nav-main .menu-container{
+    display: flex;
+    align-items: center;
+}
+/* pagtangal ng line sa menu at paglagay ng margin */
+.main .home-section .nav-main .menu-container li a{ 
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 25px;
+  /* para ma align  sya list ng li a   */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* -----------------------------hovering------------------------------------ */
+.main .home-section .nav-main .menu-container li a::after{ 
+   /* blank ang content mag create yellow vertical line */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background:var(--primarycolor);
+    /* hindi lalabas ang width dahil zero ang scale */
+    transform: scale(0,1);
+    transition: transform 200ms ease-in;
+    /* transform-origin: left; */
+}
+
+.main .home-section .nav-main .menu-container li a:hover::after{ 
+     /* lalabas ang width dahil 1,1 ang scale */
+    transform: scale(1,1);
+ }
+ /* ---------------------------------------------------------------------- */
+
+.main .home-section .nav-main .menu-container li span{ 
+  /* maglagay lang yellow line horizontally */ 
+    display: block;
+    width: 2px;
+    height: 50px;
+    background:var(--primarycolor);
+}
+
+
+.main .home-section .nav-main .menu-container li:nth-child(5) a::after,
+.main .home-section .nav-main .menu-container li:nth-child(6) a::after{ 
+  /* tatangalin lahat na deneclare sa container na to */
+    all: unset;
+ }
+
+ .main .home-section .nav-main .menu-container li:nth-child(5) a ,
+.main .home-section .nav-main .menu-container li:nth-child(6) a{ 
+  /* tatangalin lahat na deneclare sa container na to */
+    margin-right: -10px;
+ }
+
+/* dapat kung saan ang main dapat dun din ito 
+else di gagana */
+/* desktop */
+@media (max-width: 1200px) and (min-width:991px) {
+    
+}
+/* tablet */
+@media (max-width:992px) and (min-width:767px) {
+    .nav-main {
+        margin: 0 10px;
+        position:fixed;
+        margin: 0 0;
+        width: 100%;
+    } 
+    .main .home-section .nav-main {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        width: 98%;
+    }
+    .main .home-section {
+        grid-template-rows: none;
+    }
+    /* .main .home-section .nav-main .menu-container {
+        margin-top: 35px;
+    } */
+    .main .home-section .nav-main .hamburger-container{
+        margin-right:100px;
+    }
+    /* display 3 white line or block in the right */
+    .main .home-section .nav-main .hamburger-container span{
+        display: block;
+        height: 4px;
+        width: 50px;
+        background: white;
+    }
+    /* to align the tablet horizontal navbar and display grid */
+    .main .home-section .nav-main .menu-container {
+        position: absolute;
+        top: 120px;
+        height: 200px;
+        width: 100%;
+        display: grid;
+    }
+    /* to remove the rest of tropy and user icon */
+    .main .home-section .nav-main .menu-container li:nth-child(4),
+    .main .home-section .nav-main .menu-container li:nth-child(5),
+    .main .home-section .nav-main .menu-container li:nth-child(6){
+        display: none;
+    }
+}
+
+/* tablet/mobile large */
+@media (max-width:768px) and (min-width:575px) {
+    .nav-main {
+        margin: 0 10px;
+        position:fixed;
+        margin: 0 0;
+        width: 100%;
+    } 
+    .main .home-section .nav-main {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        width: 98%;
+    }
+    .main .home-section {
+        grid-template-rows: none;
+    }
+    .main .home-section .nav-main .menu-container {
+        margin-top: 35px;
+    }
+}
+/* mobile */
+@media (max-width:576px)  {
+    /* body{
+        background: rgb(238, 255, 0) !important;
+        
+    }
+    .main {
+        display: none;
+    } */
+    .nav-main {
+        margin: 0 10px;
+        position:fixed;
+        margin: 0 0;
+        width: 100%;
+    } 
+    .main .home-section .nav-main {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        width: 98%;
+    }
+    .main .home-section {
+        grid-template-rows: none;
+    }
+    .main .home-section .nav-main .menu-container {
+        margin-top: 35px;
+    }
+}

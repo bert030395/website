@@ -1,0 +1,113 @@
+
+.main .products-section{
+    /* nilagay ko percent kasi di pwede 100vh dahil sacreen ko */
+    height: 100%;
+    background-image: url("/assets/images/products-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+.main .products-section h2{
+    font-size: 42px;
+    font-weight: 500;
+    /* ito 3 ang pag align center pag dissplay=flex ang gamit*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .products-section h2 span{
+    font-weight: 500;
+    color: var(--primarycolor);
+    margin-left: 10px;
+}
+.main .products-section .product-list{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 260px) 1fr;
+    /* haba ng rows ng box pataas*/
+    grid-auto-rows: 300px;
+     /* layo in between */
+    gap: 40px;
+}
+.main .products-section .product-list .product{
+    /* coloring border */
+   border: 0.5px solid var(--primarycolorhover);
+   /* may relative connection sa hoverdatails */
+   position: relative;
+   display: grid;
+   /* cover all the container if auto */
+   grid-template-rows: 1fr auto;
+   cursor: pointer;
+}
+.main .products-section .product-list .product .burger-container{
+    /* ma align horizontally then maging rows style */
+    display: flex;
+    flex-direction: column;
+    /* ----------------------- */
+    justify-content: center;
+    align-items: center;
+    /* ---------------blurd the opacity-------------------- */
+    transition: all 200ms ease-in;
+}
+.main .products-section .product-list .product .burger-container p{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+}
+.main .products-section .product-list .product .burger-container .image-container{
+    margin-top: 20px;
+}
+.main .products-section .product-list .product .burger-container p span{
+    font-weight: 400;
+    color: var(--primarycolor);
+}
+.main .products-section .product-list .product >.price-container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin: 0 14px;
+    transition: all 200ms ease-in;
+}
+.main .products-section .product-list .product > .price-container p{
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--primarycolor);
+    transition: all 200ms ease-in;
+}
+.main .products-section .product-list .product .price-container .image-container{
+    /* ito para lumagay sa right side ang cart but not
+    rcommended dahil sa cursor pointer na dadamay.
+    scenario sa pag gamit ng GRID at FLEX*/
+    /* flex: 1;
+    display: flex;
+    justify-content: flex-end;*/
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.main .products-section .product-list .product:nth-child(1){
+    /* row 1= then 2 = count the row line //same in grid-column*/
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.main .products-section .product-list .product:nth-child(2){
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+.main .products-section .product-list .product:nth-child(3){
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+.main .products-section .product-list .product:nth-child(4){
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.main .products-section .product-list .product:nth-child(5){
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.main .products-section .product-list .product:nth-child(6){
+    grid-row: 2/3;
+    grid-column: 4/5;
+}

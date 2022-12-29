@@ -1,0 +1,61 @@
+/* combinator > imediate child hoverdetails not imediate child
+si price-container */
+/* .main .products-section .product-list .product >.burger-container ,
+.main .products-section .product-list .product >.price-container {
+display: none;
+} */
+/* ---------------------FOR PRODUCT HOVER-------------------------------------- */
+.main .products-section .product-list .product:hover > .burger-container, 
+.main .products-section .product-list .product:hover > .price-container {
+    opacity: 0;
+}
+.main .products-section .product-list .product:hover .hover-details{
+    transform: scale(1);
+}
+/* -----------------------------END OF HOVER-------------------------------------- */
+/* all hover details */
+.main .products-section .product-list .product .hover-details{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    /* pag zero ito then ma hover sa taas magiging one */
+    transition: transform 300ms ease-in;
+    transform: scale(0);
+    /* transform-origin: top; */
+    /* z-index pagpatong sa first layer */
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr auto ;
+    /* display none para mawala them */
+    /* display: none; */
+}
+.main .products-section .product-list .product .hover-details .price-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main .products-section .product-list .product .hover-details .price-container p:nth-child(1){
+    font-size: 25px;
+    font-weight: 300;
+}
+.main .products-section .product-list .product .hover-details .price-container p:nth-child(1) span{
+    color: var(--primarycolorhover);
+    font-weight: 300;
+}
+.main .products-section .product-list .product .hover-details .price-container p:nth-child(2){
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--primarycolorhover);
+    margin-top: 0;
+}
+.main .products-section .product-list .product .hover-details .image-container{
+    margin: 0 14px;
+    margin-bottom: 18px;
+    /* para mapunta sa right side */
+    display: grid;
+    justify-self: end;
+
+}
